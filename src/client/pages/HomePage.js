@@ -32,7 +32,7 @@ const HomePage = props => {
             <span className="card-title">{article.title}</span>
           </div>
           <div className="card-action">
-            <a href="javascript:void(0)" onClick={() => readArticle(article)}>
+            <a href="#!" onClick={() => readArticle(article)}>
               Read More
             </a>
           </div>
@@ -102,9 +102,6 @@ HomePage.defaultProps = {
 };
 
 export default {
-  component: connect(
-    mapStateToProps,
-    { fetchArticles }
-  )(HomePage),
+  component: connect(mapStateToProps, { fetchArticles })(HomePage),
   loadData
 };
